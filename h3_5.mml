@@ -1,0 +1,540 @@
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+//
+// coneco.net レビュー用
+// SM調教師瞳3 「瞳の歌」
+//
+// 作詞：いないの
+// 作曲：ななこっち★ @1990/??/?? ??:??頃
+// 著作者：ななこっち★
+// MMLかき：ななこっち★ @1990/??/?? ??:??頃
+// MMLかきなおし：ななこっち★ @2013/05/05　@23:33頃
+// ライセンス：転載禁止 (rmakeのみ利用可)
+//
+// 奨励音源
+// TiMidiTy
+// http://www.daiba.cx/TiMidity%4b%4b/
+// https://twitter.com/nanakochi123456/status/326647509101473792
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_///
+// ループ数の指定 1以上
+//
+Int LOOP=2
+//
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+Tempo 135
+曲名{"ＳＭ調教師瞳３ Mus12"}
+作者{"Copyright 1995-1996 EJ Corp & ゆった"}
+
+#PEDALON={Sub {r16y64,127}}
+#PEDALOFF={r-32 y64,0 r32}
+
+Function LoopPlay(Str Mml, Int Count) {
+	Str Newmml={}
+	For (Int i = 1; i < LOOP + Count; i++) {
+		Newmml=Newmml+#STR(Mml)
+	}
+	Newmml
+}
+
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+// メロディー
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+#MELODY1={
+	q100l8
+	>
+	c<brg refg &
+	q95g2.q100ga
+	b-4b-a& agfe
+	q95f2.q100fg
+	a-4a-g& g4f4
+	ed#e>c rr<cd
+	e-4e-f& fe-dc
+	d2.r4
+	>>
+	c<brg refg &
+	q95g2.q100ga
+	b-4b-a& agf24g24f24e
+	q95f2.q100fg
+	a-4a-g& ga-gf
+	ed#e>c rr
+	Sub {
+		cd
+		e-4e-f& fe-dc
+		d2.r4
+	}
+	<cd
+	e-4e-f& fe-dc
+	d2.r4
+//
+	c<br>c r<fga&
+	a4>c4<b4a4
+	g4.e4.fg&
+	g2.r4
+	f4.d& def4&
+	f4a4 g4f4
+	e4fg &g2&
+	g2.r4>
+
+	c<br>c r<fga&
+	a4>c4<b4a4
+	g4.e4.fg&
+	g2.r4
+	a4.f& fga4&
+	a4>c4 <b4>c4
+	q80
+	d4r4 <b4r4
+	a4r4  g4r4
+}
+
+#SUB={
+	l16
+	[2
+		[4
+			[d]<[g]>[e][g]
+		]
+		[d]<[g]>[e][d]
+		[4 c#] [d][e]
+		[f][d][a]<[a]>
+		[f][d][a]<[a]>
+		[d]<[g#]>[g#][f]
+		[4 d][e][f]
+		[g][e]>[c]<[g]
+		[e][c][g][e]
+		[c]<[a-]>[d]<[a-]>
+		[e-]<[a-]>[f]<[a-]>
+		[g]<[g]>[d]<[g]
+		bg>c<g>c#<g>d<g>
+	]
+	[f][c][a][f]
+	[c]<[a]>[f][c]<
+	[a][f]>[c]<[a]
+	[f][c][a][f]
+	egb>e< gb>eg<
+	b>egb egb>e
+	c#<aec# aec#<a>
+	ec#<ae >c#<aec#
+	[d][f][a][d]
+	[f][a]>[d]<[f]
+	[a]>[d][f]<[a]>
+	d<bgd bgd<b>
+	ceg>c <eg>ce<
+	g>ceg ceg>c
+	edc<b- agfe
+	dc<b-a gb->ce
+
+	[f][c][a][f]
+	[c]<[a]>[f][c]<
+	[a][f]>[c]<[a]
+	[f][c][a][f]
+	egb>e< gb>eg<
+	b>egb egb>e
+	c#<aec# aec#<a>
+	ec#<ae >c#<aec#
+	[d][f][a][d]
+	[f][a]>[d]<[f]
+	[a]>[d][f]<[a]>
+	[d][f][a][d]
+
+	[2 r1]
+
+}
+
+#CHORD={
+	q100
+	[2
+		Sub { <g1^1^2 a2>}
+		Sub { d2c2 <b1 b-2 >c#2 }
+		Sub { e1^1^1 }
+		r1r1r1
+
+		Sub { <a1 a-2g2^1>}
+		Sub { d1 ^1 c1}
+		Sub { f1  ^1 e1}
+		r1r1r1
+
+		Sub{ <a-1g1> }
+		Sub {c1<b1> }
+		Sub {e-1d1 }
+		r1r1
+	]
+
+	Sub { <a1^1> }
+	Sub { c1^1 }
+	Sub { f1^1 }
+	r1r1
+
+	Sub { <g1a1> }
+	Sub { <b1>c#1 }
+	Sub { e1^1 }
+	r1r1
+
+	Sub { <a1g1> }
+	Sub { d1^1 }
+	Sub { f1^1 }
+	r1r1
+
+	Sub { <g1^1> }
+	Sub { c1^1 }
+	Sub { e1^1 }
+	r1r1
+
+	Sub { <a1^1> }
+	Sub { c1^1 }
+	Sub { f1^1 }
+	r1r1
+
+	Sub { <g1a1> }
+	Sub { <b1>c#1 }
+	Sub { e1^1 }
+	r1r1
+
+	Sub { <a1^1> }
+	Sub { d1^1 }
+	Sub { f1^1 }
+	r1r1
+
+	[4
+		r4'<g4b4>f4'
+	]
+
+
+}
+
+
+#BASS={
+	q98
+	l16
+	cr<grar>c8 & c8 <grar>cr<
+	brgrarb8 & b8grarbr
+	b-rgrarb-r ararbr>c#r
+	dr<ar>crd8 & d8<ar>crd8 &
+	d8<a-r>crd8 & d8<grbr>dr
+	cr<grar>c8 & c8 <grargr
+	a-re-rfra-8 & a-8e-rfra-r
+	grdrerg8 & g8 grarbr>
+
+	cr<grar>c8 & c8 <grar>cr<
+	brgrarb8 & b8grarbr
+	b-rgrarb-r ararbr>c#r
+	dr<ar>crd8 & d8<ar>crd8 &
+	d8<a-r>crd8 & d8<grbr>dr
+	cr<grar>c8 & c8 <grargr
+	a-re-rfra-8 & a-8e-rfra-r
+	grdrerg8 & g8 br>drgr
+
+	frcrdrf8 & f8 crdrf8 &
+	f8crdrf8 & f8 crdrfr
+	er<br>dre8 & e8 <br>dre8 &
+	er<ar>c#rer argrfrer
+	dr<ar>crd8 & d8<ar>crd8 &
+	d8<gr>crd8 & d8<grbr>dr
+	cr<grar>c8 & c8 <grar>c8 &
+	cr<grar>c8 & c8 crdrer
+
+	frcrdrf8 & f8 crdrf8 &
+	f8crdrf8 & f8 crdrfr
+	er<br>dre8 & e8 <br>dre8 &
+	er<ar>c#rer argrfrer
+	dr<ar>crd8 & d8<ar>crd8 &
+	d8<ar>crd8 & d8drerfr
+	r4g4r4f4 r4e4r4d4
+}
+ 
+トラック 1;
+//音色(Clarinet)
+音色(Flute)
+[2
+o5v127
+#MELODY1
+]
+
+トラック 2;
+[2
+音色(Piccolo)
+o6v127
+#MELODY1
+]
+
+トラック 3;
+[2
+o7v90
+//音色(MusicBox)
+音色(Glockenspiel)
+#SUB
+]
+トラック 6;
+[2
+//音色(SynthStrings1)
+音色(Strings1)
+o5v80
+#CHORD
+]
+トラック 9;
+[2
+
+o3v80
+音色(FingerBass)
+Sub { #BASS }
+>#BASS
+]
+
+トラック 8;
+[2
+o3v127
+音色(FretlessBass)
+#BASS }
+]
+
+
+トラック 10;
+音色(StandardSet)
+
+v90
+$b{n(Kick1),}
+$s{n(Snare1),}
+$p{n(PedalHiHat),}
+$o{n(OpenHiHat),}
+$h{n(ClosedHiHat),}
+//$r{n(RideCymbal1),}
+//$r{n(RideBell),}
+$y{n(CrashCymbal2),}
+$c{n(CrashCymbal1),}
+//$t{n(Tambourine),}
+$e{n(BellTree),}
+$k{n(Sticks),}
+
+$t{n(HighTom1),}
+$m{n(MidTom1),}
+$l{n(LowTom1),}
+$f{n(LowTom2),}
+
+
+#r1={
+	Rythm {
+		'b8h8' h8 's8h8' h8 'b8h8' h8 's8h8' o8
+	}
+}
+#r2={
+	Rythm {
+		'b8h8' h8 's8h8' h8 'b8h8' 'sh8' 's8h8' h8
+	}
+}
+
+#r3={
+	Rythm {
+		'c8b8h8' h8 's8h8' h8 'b8h8' h8 's8h8' o8
+	}
+}
+
+#r4={
+	Rythm {
+		'b8h8' h8 's8h8' h8 'b8h8' o8 's8h8' o8
+	}
+}
+
+#r5={
+	Rythm {
+		[3 r4 'b4s4h4' ]
+		r4h16h16o8
+	}
+}
+
+[2
+	[7 #r1] #r2
+	#r3 [6 #r1] #r2
+	#r3 [6 #r1] #r4
+	#r3 [5 #r1] #r5
+]
+
+End
+
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+// timidity 起動バッチ（参考）
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+cd "Program\Timidity++\Timidity++"
+start timidity -c ../patches/cfgs/1.cfg -Ow --output-stereo -s 48000 --reverb=d,127 e:\wd\bgm\h3_5.mid
+timidity -c ../patches/cfgs/1.cfg --output-stereo -s 48000 --reverb=d,127 e:\wd\bgm\h3_5.mid
+
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+// timidity.cfg
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
+dir ../patches/izumo/inst/GUS
+dir ../patches/izumo/inst/GUS/gsdrum00
+dir ../patches/izumo/inst/GUS/gsdrum08
+dir ../patches/izumo/inst/GUS/gsdrum25
+dir ../patches/izumo/inst/GUS/gsdrum40
+dir ../patches/izumo/inst/GUS/power
+dir ../patches/izumo/inst/gusperc
+dir ../patches/izumo/inst/mazpat
+dir ../patches/izumo/inst/misc
+dir ../patches/izumo/inst/orchhitpatch
+dir ../patches/izumo/inst/release	
+dir ../patches/izumo/inst/roland
+dir ../patches/izumo/inst/wime
+dir ../patches/izumo/inst/wowpats
+dir ../patches/izumo/inst
+dir ../patches/izumo
+dir ../patches/Piano_SplendidGrand
+dir ../patches/Titanic
+
+source default.cfg
+source gsdrum.cfg
+source gsdrum25.cfg
+source sfx.cfg
+source mt32.cfg
+source power.cfg
+source release.cfg
+
+##############################################################################
+# End of configuration file
+
+
+dir ../patches/atomic
+dir ../patches/fluid3
+dir ../patches/atomic
+dir ../patches/famicom
+dir ../patches/syuuhou/ultimate
+dir ../patches/syuuhou/realgs
+
+bank 0
+
+	9 gus/glocken.pat amp=140  rate=252:10:90:80:80:80  offset=255:160:100 keep=loop
+	64 %font Atomic.sf2 0 64 amp=180 	
+	65 %font Atomic.sf2 0 65 amp=130 	
+
+	53 %font Atomic.sf2 0 53 amp=26 	
+# bass pizz
+	45 %font FluidR3GM.SF2 0 45 amp=45 	
+# orch harp
+#	46 %font atomic.SF2 0 46 amp=80 	
+	46 gus/harp.pat amp=250 keep=env rate=252:230:90:80:80:80
+#
+# orch pizz
+	47 %font atomic.SF2 0 45 amp=50 	
+
+# ac bass
+	32 %font FluidR3GM.SF2 0 32 amp=120 
+
+# piano
+	 0 %font Piano_SplendidGrand.sf2 0 0 tune=+12 amp=100 keep=env keep=loop rate=:100:0:100:220:220:220 
+
+
+# violin
+#	48 mazpat/Stings/STRING03.PAT amp=100 keep=env tune=6 rate=230:230:90:80:80:80
+	48 %font Titanic_200_GMGS_1.2.sf2 0 48 amp=200 rate=230:230:90:80:80:80
+
+# violin
+	71 GUS/violin.pat amp=150 keep=env vibrato=30:190:10  rate=255:60:50 offset=255:230:100
+# piccolo
+	72 %font Titanic_200_GMGS_1.2.sf2 0 72 amp=310  keep=env vibrato=30:90:10  rate=255:70:30 offset=255:160:100
+	73 %font atomic.SF2 0 72 amp=240  keep=env vibrato=30:170:20  rate=255:10:50 offset=255:250:100
+	85 %font Titanic_200_GMGS_1.2.sf2 0 85 amp=50  vibrato=30:90:10
+
+##############################################################################
+# A configuration file for Dustin McCartney's GS drum patches. 
+# You can find these at any Ultrasound FTP site as gsdrum??.zip. 
+# Unpack the archives in correspondingly named directories under
+# /usr/local/lib/timidity (or anywhere along the library path)
+# and source this configuration file to activate the patches.
+
+##############################################################################
+# Standard drums
+
+drumset 0
+
+	29 gsdrum00/scratch1
+	30 gsdrum00/scratch2
+#	35 gsdrum00/kick2 amp=300
+#	36 gsdrum00/kick2 amp=300
+	34 %font FluidR3GM.SF2 128 0 36 amp=270 
+	35 %font FluidR3GM.SF2 128 0 36 amp=270 
+	36 %font FluidR3GM.SF2 128 0 35 amp=270
+	31 gsdrum00/stickrim amp=250
+	40 gsdrum00/snare2 amp=200
+	38 gsdrum00/snare2 amp=200
+	39 gsdrum00/snare2 amp=200
+	38 %font FluidR3GM.SF2 128 48 38 amp=200 
+	39 %font FluidR3GM.SF2 128 48 38 amp=200 
+	40 %font FluidR3GM.SF2 128 48 38 amp=200 
+
+	41 gsdrum00/tomlo2 amp=200
+#	42 gsdrum00/hihatcl amp=110
+	43 gsdrum00/tomlo1 amp=270
+	44 gsdrum00/hihatpd
+	45 gsdrum00/tommid2 amp=260
+#	46 gsdrum00/hihatop amp=140 keep=env keep=loop rate=:100:0:100:220:220:220
+	42 %font FluidR3GM.SF2 128 0 42 amp=60
+	44 %font FluidR3GM.SF2 128 0 42 amp=40
+	46 %font FluidR3GM.SF2 128 0 46 amp=150 keep=loop rate=240:40:50:140:10:10:10 offset=255:200:0
+	50 %font FluidR3GM.SF2 128 0 46 amp=275 keep=loop
+# rate=250:10:20:140:10:10:10 offset=255:200:0
+#	47 gsdrum00/tommid2 amp=260
+#	48 gsdrum00/tomhi2 amp=260
+	43 %font FluidR3GM.SF2 128 0 43 amp=210 	
+	41 %font FluidR3GM.SF2 128 0 41 amp=210 	
+	43 %font FluidR3GM.SF2 128 0 43 amp=210 	
+	45 %font FluidR3GM.SF2 128 0 45 amp=210 	
+	47 %font FluidR3GM.SF2 128 0 47 amp=210 	
+	48 %font FluidR3GM.SF2 128 0 48 amp=210 	
+
+	49 gsdrum00/cymcrsh2 amp=130
+	49 %font FluidR3GM.SF2 128 0 49 amp=160 keep=loop rate=240:10:20:140:10:10:10 offset=255:200:0
+#	57 %font Atomic.sf2 128 0 49 amp=220  keep=loop rate=240:10:20:140:10:10:10 offset=255:200:0
+#	49 %font FluidR3GM.SF2 128 0 57 amp=210 	
+	50 gsdrum00/tomhi2 amp=300
+#	51 gsdrum00/cymride1
+	51 %font Atomic.sf2 128 0 51 amp=200 	
+	52 gsdrum00/cymchina
+#	53 gsdrum00/cymbell
+	53 %font atomic.sf2 128 0 51 amp=120 	
+	54 gsdrum00/tamborin amp=220
+	55 gsdrum00/cymsplsh
+	56 gsdrum00/cowbell
+#	57 gsdrum00/cymcrsh2
+#	59 gsdrum00/cymride2
+#	57 gsdrum00/cymcrsh2 amp=120
+
+#59 %font Atomic.sf2 128 0 59 amp=200 	
+	60 gsdrum00/bongohi
+	61 gsdrum00/bongolo
+	62 gsdrum00/congahi1
+	63 gsdrum00/congahi2
+	64 gsdrum00/congalo
+	69 gsdrum00/cabasa
+	73 gsdrum00/guiro1
+	74 gsdrum00/guiro2
+	76 gsdrum00/woodblk1
+	77 gsdrum00/woodblk2
+	78 gsdrum00/cuica1
+	79 gsdrum00/cuica2
+	82 gsdrum00/shaker
+	84 GUS/belltree.pat keep=loop keep=env amp=220  keep=loop rate=:100:0:100:100:100:100 
+
+##############################################################################
+# Room drums
+
+drumset 8
+
+	41 gsdrum08/roomlow2.pat
+	43 gsdrum08/roomlow1.pat
+	45 gsdrum08/roommid2.pat
+	47 gsdrum08/roommid1.pat
+	48 gsdrum08/roomhi2.pat
+	50 gsdrum08/roomhi1.pat
+
+##############################################################################
+# Brush drums
+
+drumset 40
+
+	38 gsdrum40/br_swish.pat
+	39 gsdrum40/br_slap.pat
+	40 gsdrum40/br_swirl.pat
+	42 gsdrum40/hihatcl.pat amp=90
+	46 gsdrum40/hihatop.pat
+
+# End of configuration file
